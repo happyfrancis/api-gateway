@@ -11,11 +11,6 @@ eureka:
   client:
     service-url:
        defaultZone: http://localhost:8761/eureka/
-       #超时配置 本质还是hystrix的超时配置
-hystrix:
-  command:
-     default:
-       execution:
-         isolation:
-           thread:
-             timeoutInMilliseconds: 5000
+  instance:
+    prefer-ip-address: true
+
